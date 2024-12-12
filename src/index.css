@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Parkinsans", sans-serif;
+}
+
+.contenedor-componentes{
+  display: flex;
+  justify-content: space-around;
+  
+  text-align: center;
+  
+}
+
+.contenedor-componentes img{
+  width: 150px;
+  height: 120px;
+  transition: all .5s;
+  object-fit: contain;
+}
+
+.contenedor-componentes img:hover{
+  transform: scale(1.2);
+  
+}
+
