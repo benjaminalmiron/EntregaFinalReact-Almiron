@@ -19,9 +19,9 @@ const App = ()=> {
      </section>
 
     <section className="contenedor-componentes">
-      <CartProducts price={100000} title="Teclado" img="/images/X3-205.jpg"/>
-      <CartProducts price={100000} title="Teclado" img="/images/X3-205.jpg"/>
-      <CartProducts price={100000} title="Teclado" img="/images/X3-205.jpg"/>
+      <CartProducts price={100000} title="Teclado" img="images/X3-205.jpg"/>
+      <CartProducts price={100000} title="Teclado" img="images/X3-205.jpg"/>
+      <CartProducts price={100000} title="Teclado" img="images/X3-205.jpg"/>
     </section>
 
     </main>
