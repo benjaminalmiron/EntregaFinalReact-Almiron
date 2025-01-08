@@ -1,5 +1,10 @@
 
+
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -7,23 +12,28 @@
   font-family: "Parkinsans", sans-serif;
 }
 
-.contenedor-componentes{
-  display: flex;
-  justify-content: space-around;
-  
-  text-align: center;
-  
-}
+ 
 
-.contenedor-componentes img{
-  width: 150px;
-  height: 120px;
-  transition: all .5s;
-  object-fit: contain;
+
+.texto{
+  width: 200px;
+  
 }
 
 .contenedor-componentes img:hover{
   transform: scale(1.2);
   
+}
+
+.card:hover{
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.card{
+  box-shadow: 0 4px 8px black ;
+  transition: box-shadow 0.3s ease; 
+  border-radius: 10px;
+  height: 15rem;
 }
 

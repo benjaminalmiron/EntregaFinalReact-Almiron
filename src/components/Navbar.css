@@ -1,16 +1,30 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap');
+
 .header{
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    width: 100%;
-    align-items: center;
-    padding: 20px 10%;
     background-color: #ff000050;
-    
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    
+  }
+  
+  .navbar-nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    
+  }
+  
+  .navbar-nav a {
+    color: black;}
+  
 .logo{
     color: black;
     font-weight: bold;
@@ -38,11 +52,12 @@ a:hover{
     
 }
 
-.button{
+button{
     background-color: black;
     color: white;
     border-radius: .3125rem;
     cursor: pointer;
+    
 }
 
 footer{
@@ -54,3 +69,19 @@ footer{
     text-align: center;
     align-content: center;
   }
+
+  .cart-count{
+    position: absolute;
+    top: 38px;
+    right: 188px;
+    background-color: black;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+  }
+  

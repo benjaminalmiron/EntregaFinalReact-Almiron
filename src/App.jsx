@@ -1,40 +1,23 @@
+
 import NavBar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
-import CartProducts from "./components/CartProducts"
 import Footer from "./components/Footer"
+import ItemDetailContainer from "./components/ItemDetailContainer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
-
-const App = ()=> {
+function App() {
+  
   return(
-    
-  <>
-  <header>
-  <NavBar/>
-  </header>
-    
-    <main>
-    <section>
-     <ItemListContainer/> 
-     </section>
-
-    <section className="contenedor-componentes">
-      <CartProducts price={100000} title="Teclado" img="public/X3-205.jpg"/>
-      <CartProducts price={100000} title="Teclado" img="public/X3-205.jpg"/>
-      <CartProducts price={100000} title="Teclado" img="public/X3-205.jpg"/>
-    </section>
-
-    </main>
-     
-     <footer>
+    <BrowserRouter>
+   <NavBar/>
+    <Routes>
+      <Route path="/" element={<ItemListContainer/> }/>
+      <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+    </Routes>
       <Footer/>
-     </footer>
-     
-     </>
- 
-    
-
-)  
+      </BrowserRouter>
+);  
 }
 
 export default App
