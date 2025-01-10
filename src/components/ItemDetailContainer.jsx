@@ -6,16 +6,16 @@ import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
   const [compInfo, SetCompInfo]=useState({});
-  const params = useParams();
   
+  const {id} = useParams()
     useEffect(()=>{
 
         async function getCompData() {
-            const response = await asyncDataById(params.id)
+            const response = await asyncDataById(id)
             SetCompInfo(response)
         }
         getCompData()
-    },[])
+    },[id])
 
        
 

@@ -22,7 +22,29 @@ export function asyncDataById(itemID) {
     
     setTimeout(()=>{
         const requestedComponent = components.find((item)=> item.id === Number(itemID))
-        resolve(requestedComponent)
+        if (requestedComponent) {
+          resolve(requestedComponent);  
+        } else {
+          reject(new Error(`Componente con ID ${itemID} no encontrado.`));  
+        }
+    }, 500)
+    
+  } )
+
+    return promiseData;
+}
+
+export function asyncDataByCategory(catID) {
+  console.log("Solicitando componente por ID", catID)
+  const promiseData = new Promise ((resolve, reject)=>{
+    
+    setTimeout(()=>{
+        const requestedComponent = components.filter((item)=> item.category.toLocaleLowerCase() === catID.toLocaleLowerCase())
+        if (requestedComponent) {
+          resolve(requestedComponent);  
+        } else {
+          reject(new Error(`Componente con ID ${catID} no encontrado.`));  
+        }
         
     }, 500)
     

@@ -1,0 +1,25 @@
+.itemDetail{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    
+}
+
+.info-detail{
+    text-align: center;
+    width: 300px;
+    margin-top: 2.5rem;
+    
+}
+
+.title{
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    
+}
+
+img{
+    width: 500px;
+}

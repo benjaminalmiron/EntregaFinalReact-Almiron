@@ -1,23 +1,26 @@
 import ItemCount from "./ItemCount"
+import "./ItemDetail.css"
+
+
 
 function ItemDetail(props) {
-    const { img, price, stock, title}= props;
+    const { img, price, description , title}= props;
   return (
-    <div>
-        <div>
+    <div className="itemDetail">
+        
     <img src={img}  alt="" />
-    <div>
+    <div className="info-detail">
         <h3></h3>
-        <p className="texto">{title}</p>
-    </div>
-
-    <div>
+        <p className="title">{title}</p>
+    
+        <p>{description}</p>
+    
         <p >${price}</p>
+    
+    <button className="button">Agregar al carrito</button>
+        <ItemCount stock={props.stock}/>
     </div>
 
-    <button className="button">Agregar al carrito</button>
-    </div>
-        <ItemCount stock={props.stock}/>
     </div>
   )
 }

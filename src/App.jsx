@@ -14,6 +14,8 @@ function App() {
     <Routes>
       <Route path="/" element={<ItemListContainer/> }/>
       <Route path="/item/:id" element={<ItemDetailContainer/>}/>
+      <Route path="/PrimeraEntregaReact-Almiron" element={<ItemListContainer/>}/>
+      <Route path="/category/:catid" element={<ItemListContainer/>}/>
     </Routes>
       <Footer/>
       </BrowserRouter>

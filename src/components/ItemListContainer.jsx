@@ -1,15 +1,43 @@
 import Item from "./Item"
-import asyncData from "../data/asyncData"
+import asyncData, { asyncDataByCategory } from "../data/asyncData"
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
+import { useParams } from "react-router-dom";
 
 // Componente que recibe la prop 'name'
- function ItemListContainer(props){
+ function ItemListContainer(){
   const[components, setComponents] = useState([])
+  const {catid}=useParams()
+  
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = catid === undefined 
+          ? await asyncData() 
+          : await asyncDataByCategory(catid);
+        setComponents(response);
+      } catch (error) {
+        alert(error);
+      }
+    };
+  
+    fetchData();
+  
+  }, [catid]);
 
-  useEffect(()=>{
-    const response = asyncData()
-    response.then((respuesta) => setComponents(respuesta)).catch((error)=>alert(error))},[])
+
+ /*  useEffect(()=>{
+    if(catid === undefined){
+
+      const response = asyncData()
+    response.then((respuesta) => setComponents(respuesta)).catch((error)=>alert(error))
+      
+    }else{
+      const response = asyncDataByCategory(catid)
+      response.then((respuesta) => setComponents(respuesta)).catch((error)=>alert(error))
+
+    }
+    },[catid]) */
 
   
   

@@ -12,19 +12,22 @@ const NavBar = () => {
       </div>
       <ul className='navbar-nav'>
         <li>
-          <NavLink  to="/">Inicio</NavLink>
+          <NavLink to="/">Inicio</NavLink>
         </li>
         <li>
-        <NavLink to="/item">Detalle</NavLink>
+        <NavLink to="/item"></NavLink>
         </li>
         <li>
-        <a href="#">Mouses</a>
+        <NavLink to= "/category/Teclados">Teclados</NavLink>
         </li>
         <li>
-        <a href="#">Monitores</a>
+        <NavLink to= "/category/Mouses">Mouses</NavLink>
         </li>
         <li>
-        <a href="#">Procesadores</a>
+        <NavLink to= "/category/Monitores">Monitores</NavLink>
+        </li>
+        <li>
+        <NavLink to= "/category/Procesadores">Procesadores</NavLink>
         </li>
         <li>
         <a href="#">Contacto</a>
