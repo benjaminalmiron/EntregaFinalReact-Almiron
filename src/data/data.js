@@ -13,7 +13,7 @@ const components = [
     "title": "Teclado Corsair K95 RGB Platinum",
     "price": 199.99,
     "stock": 7,
-    "img": "https://example.com/img/corsair-k95.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_624140-MLA79864368285_102024-O.webp",
     "category": "Teclados",
     "description": "Teclado premium con switches Cherry MX y teclas multimedia dedicadas."
   },
@@ -22,7 +22,7 @@ const components = [
     "title": "Teclado Razer BlackWidow V3",
     "price": 119.99,
     "stock": 6,
-    "img": "https://example.com/img/razer-blackwidow-v3.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_686837-MLU74182494965_012024-O.webp",
     "category": "Teclados",
     "description": "Teclado mecánico con switches Razer y retroiluminación RGB."
   },
@@ -31,43 +31,43 @@ const components = [
     "title": "Teclado mecánico SteelSeries Apex Pro",
     "price": 179.99,
     "stock": 9,
-    "img": "https://example.com/img/steelseries-apex-pro.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_880592-MLU73089406964_112023-O.webp",
     "category": "Teclados",
     "description": "Teclado con switches ajustables y retroiluminación RGB personalizada."
   },
   {
     "id": 5,
-    "title": "Raton Logitech G502 HERO",
+    "title": "Mouse Logitech G502 HERO",
     "price": 49.99,
     "stock": 4,
-    "img": "https://example.com/img/logitech-g502.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_656261-MLU72703529811_112023-O.webp",
     "category": "Mouses",
     "description": "Raton ergonómico con sensor HERO y 11 botones programables."
   },
   {
     "id": 6,
-    "title": "Raton Razer DeathAdder V2",
+    "title": "Mouse Razer DeathAdder V2",
     "price": 69.99,
     "stock": 3,
-    "img": "https://example.com/img/razer-deathadder-v2.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_631903-MLU73119042951_112023-O.webp",
     "category": "Mouses",
     "description": "Raton con sensor óptico Focus+, ideal para gamers exigentes."
   },
   {
     "id": 7,
-    "title": "Raton SteelSeries Rival 600",
+    "title": "Mouse SteelSeries Rival 600",
     "price": 79.99,
     "stock": 8,
-    "img": "https://example.com/img/steelseries-rival-600.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_803775-MLA74137020736_012024-O.webp",
     "category": "Mouses",
     "description": "Raton con sensor dual, 7 botones programables y peso ajustable."
   },
   {
     "id": 8,
-    "title": "Raton Corsair Dark Core RGB/SE",
+    "title": "Mouse Corsair Dark Core RGB/SE",
     "price": 89.99,
     "stock": 5,
-    "img": "https://example.com/img/corsair-dark-core.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_658711-MLU77912358098_082024-O.webp",
     "category": "Mouses",
     "description": "Raton inalámbrico con retroiluminación RGB y diseño ergonómico."
   },

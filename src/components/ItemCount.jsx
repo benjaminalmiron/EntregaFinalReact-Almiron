@@ -15,10 +15,10 @@ function ItemCount(props) {
     }
   return (
     <>
-    <div>
-        <button onClick={handleAdd}>+</button>
+    <div className='Button1'>
+        <button className='addButton' onClick={handleAdd}>+</button>
         <span>{count}</span>
-        <button onClick={handleSubstract}>-</button>
+        <button className='addButton' onClick={handleSubstract}>-</button>
     </div>
     </>
   )
