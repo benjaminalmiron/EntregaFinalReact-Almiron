@@ -6,19 +6,27 @@ function ItemCount(props) {
     
     
     const handleAdd = () => {
-        setCount(count <props.stock ? count + 1 : count) 
+        setCount(count <props.max ? count + 1 : count) 
     }
     const handleSubstract = () => {
         if(count >1){
             setCount(count -1)
         }
     }
+
+    function handleClick() {
+        props.submitCount(count);
+      }
+
   return (
     <>
     <div className='Button1'>
         <button className='addButton' onClick={handleAdd}>+</button>
         <span>{count}</span>
         <button className='addButton' onClick={handleSubstract}>-</button>
+    </div>
+    <div>
+    <button onClick={handleClick} className="button">Agregar al carrito</button>
     </div>
     </>
   )
