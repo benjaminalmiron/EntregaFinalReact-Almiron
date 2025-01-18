@@ -32,6 +32,7 @@ const NavBar = () => {
         <li>
         <a href="#">Contacto</a>
         </li>
+        
       </ul>
       <CartWidget/>
       </nav>

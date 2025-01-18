@@ -3,21 +3,27 @@ import asyncData, { asyncDataByCategory } from "../data/asyncData"
 import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
+import { SpinnerCircularFixed } from 'spinners-react';
+import Loader from "./Loader"
 
 // Componente que recibe la prop 'name'
  function ItemListContainer(){
   const[components, setComponents] = useState([])
   const {catid}=useParams()
+  const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = catid === undefined 
-          ? await asyncData() 
+        setIsLoading(true); // Empieza el loader
+        const response = catid === undefined
+          ? await asyncData()
           : await asyncDataByCategory(catid);
         setComponents(response);
       } catch (error) {
         alert(error);
+      } finally {
+        setIsLoading(false); // Termina el loader
       }
     };
   
@@ -25,21 +31,6 @@ import { useParams } from "react-router-dom";
   
   }, [catid]);
 
-
- /*  useEffect(()=>{
-    if(catid === undefined){
-
-      const response = asyncData()
-    response.then((respuesta) => setComponents(respuesta)).catch((error)=>alert(error))
-      
-    }else{
-      const response = asyncDataByCategory(catid)
-      response.then((respuesta) => setComponents(respuesta)).catch((error)=>alert(error))
-
-    }
-    },[catid]) */
-
-  
   
   const list = components.map((comp) => (
   <Item
@@ -49,15 +40,15 @@ import { useParams } from "react-router-dom";
     price={comp.price}
     img={comp.img}/>));
 
-    <section>
-      {list}
-    </section>
-
-  return (
-    <section className="contenedor-componentes">
-      {list}
+    if (isLoading) {
+      return <Loader />;
+    }
+  
+    return (
+      <section className="contenedor-componentes">
+        {list}
       </section>
-  );
+    );
 };
 
 // Componente principal donde se pasa el valor de la prop

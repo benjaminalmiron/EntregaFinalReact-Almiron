@@ -6,7 +6,8 @@ const components = [
     "stock": 10,
     "img": "https://spacegamer.com.ar/img/Public/1058-producto-38694-2-9748.jpeg",
     "category": "Teclados",
-    "description": "Teclado compacto con switches mecánicos intercambiables y retroiluminación RGB."
+    "description": "Teclado compacto con switches mecánicos intercambiables y retroiluminación RGB.",
+   
   },
   {
     "id": 2,
@@ -33,7 +34,8 @@ const components = [
     "stock": 9,
     "img": "https://http2.mlstatic.com/D_NQ_NP_880592-MLU73089406964_112023-O.webp",
     "category": "Teclados",
-    "description": "Teclado con switches ajustables y retroiluminación RGB personalizada."
+    "description": "Teclado con switches ajustables y retroiluminación RGB personalizada.",
+    
   },
   {
     "id": 5,
@@ -60,7 +62,8 @@ const components = [
     "stock": 8,
     "img": "https://http2.mlstatic.com/D_NQ_NP_803775-MLA74137020736_012024-O.webp",
     "category": "Mouses",
-    "description": "Raton con sensor dual, 7 botones programables y peso ajustable."
+    "description": "Raton con sensor dual, 7 botones programables y peso ajustable.",
+   
   },
   {
     "id": 8,
@@ -96,7 +99,8 @@ const components = [
     "stock": 1,
     "img": "https://example.com/img/lg-ultragear-27gn950.jpg",
     "category": "Monitores",
-    "description": "Monitor 4K UHD con 144Hz, 1ms de respuesta y soporte para HDR."
+    "description": "Monitor 4K UHD con 144Hz, 1ms de respuesta y soporte para HDR.",
+    "delivery": true,
   },
   {
     "id": 12,

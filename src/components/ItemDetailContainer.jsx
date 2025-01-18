@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Component } from "react";
 import {asyncDataById} from "../data/asyncData";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-
+import Loader from "./Loader";
 
 function ItemDetailContainer() {
-  const [compInfo, SetCompInfo]=useState({});
+  const [compInfo, SetCompInfo]=useState(null);
   
   const {id} = useParams()
     useEffect(()=>{
@@ -17,11 +17,11 @@ function ItemDetailContainer() {
         getCompData()
     },[id])
 
-       
-
-    console.log(compInfo)
+    if(compInfo)
+        return <ItemDetail {...compInfo}/>
+    else
+    return <Loader/>
     
-    return <ItemDetail {...compInfo}/>
 }
 
 export default ItemDetailContainer
