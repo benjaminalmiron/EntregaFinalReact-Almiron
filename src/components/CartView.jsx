@@ -1,15 +1,31 @@
 import { useContext } from "react"
 import cartContext from "../storage/cartContext"
+import { createBuyOrder } from "../data/database"
+
 
 
 
 function CartView() {
-  const {cartItems , removeItem} = useContext(cartContext)
+  const {cartItems , removeItem, getTotalPrice} = useContext(cartContext)
+
+
+ async function HandleCheckout() {
+    const orderData ={
+        buyer: {
+            name: "juan",
+            email: "xxxxx@gmail.com"
+        },
+        items: {cartItems},
+        total: getTotalPrice(),
+        date: new Date()
+    }
+    const data = await createBuyOrder(orderData)
+    console.log(data)
+  }
+  
   return (
     <div>
       <h1>Tu carrito</h1>
-      
-      
       {cartItems.length === 0 ? (
         <p>El carrito está vacío. ¡Agrega algunos productos!</p>
       ) : (
@@ -24,6 +40,7 @@ function CartView() {
           </div>
         ))
       )}
+  <button onClick={HandleCheckout}>Finalizar Compra</button>
     </div>
   );
 }

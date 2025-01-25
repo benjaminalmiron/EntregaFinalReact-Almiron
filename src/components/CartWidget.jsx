@@ -13,7 +13,10 @@ function CartWidget() {
     <div>
       <Link to="/cart" className="cart">
       <FontAwesomeIcon className="cart-icon" icon={faCartShopping}/>
-    <span className="cart-count">{context.countItemsInCart()}</span>
+    {
+      context.countItemsInCart( )>0 &&
+      <span className="cart-count">{context.countItemsInCart()}</span>
+    }
     </Link>
     </div>
   )

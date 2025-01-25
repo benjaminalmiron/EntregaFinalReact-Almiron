@@ -2,13 +2,13 @@ import ItemCount from "./ItemCount"
 import "./ItemDetail.css"
 import { useContext, useState } from "react"
 import cartContext from "../storage/cartContext"
-
+import { Link } from "react-router-dom";
 
 
 
 function ItemDetail(props) {
     const [isAddedToCart, setIsAdded]= useState(false)
-    const { img, price, description , id, title, stock}= props;
+    const { img, price, description , title, stock, id}= props;
     const {addItem} = useContext(cartContext)
 
     function submitCount(count){
@@ -31,7 +31,7 @@ function ItemDetail(props) {
         <p >${price}</p>
     
         {
-          isAddedToCart ? <button>Ver Carrito</button> : <ItemCount submitCount={submitCount} max={stock}/>
+          isAddedToCart ? <Link to={`/cart/`}> <button>Ver Carrito</button> </Link> : <ItemCount submitCount={submitCount} max={stock}/>
           
         }
     </div>

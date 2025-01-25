@@ -1,5 +1,5 @@
 import { useState, useEffect, Component } from "react";
-import {asyncDataById} from "../data/asyncData";
+import {asyncDataById} from "../data/database.js";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import Loader from "./Loader";
@@ -18,7 +18,7 @@ function ItemDetailContainer() {
     },[id])
 
     if(compInfo)
-        return <ItemDetail {...compInfo}/>
+        return <ItemDetail {...compInfo} id={id} />
     else
     return <Loader/>
     

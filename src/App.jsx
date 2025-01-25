@@ -8,12 +8,16 @@ import {CartContextProvider} from "./storage/cartContext";
 import CartView from "./components/CartView"
 
 
+
+
+
 function App() {
   
   return(
     <CartContextProvider>
     <BrowserRouter>
    <NavBar/>
+   
     <Routes>
       <Route path="/" element={<ItemListContainer/> }/>
       <Route path="/item/:id" element={<ItemDetailContainer/>}/>
