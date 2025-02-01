@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "./Button";
-import "./NavBar.css"
+import "./Navbar.css"
 
 function Item(props) {
     const {price, title , img , id , } = props;
