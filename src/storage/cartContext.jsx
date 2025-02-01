@@ -26,11 +26,11 @@ export function CartContextProvider(props){
         setCartItems(cartState)
     }
 
-   /*  function clearCart() {
+    function clearCart() {
         const cartState = []; 
         setCartItems(cartState); 
     }
- */
+ 
     function addItem({id, price, title, count, img}){
         /* const copyCartItems = [...cartItems, {id:id, price:price, title:title, count:count, img:img}]
         copyCartItems.push({id:id, price:price, title:title, count:count, img:img}) */
@@ -56,7 +56,7 @@ export function CartContextProvider(props){
     }    
 
     
-    return <cartContext.Provider value={{cartItems, countItemsInCart, addItem, removeItem, getTotalPrice}}>
+    return <cartContext.Provider value={{cartItems, countItemsInCart, addItem, removeItem, getTotalPrice, clearCart}}>
         {props.children}
     </cartContext.Provider>
 
