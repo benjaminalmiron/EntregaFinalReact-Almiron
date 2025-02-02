@@ -1,6 +1,9 @@
 import { useContext, useState } from "react"
 import cartContext from "../storage/cartContext"
 import { createBuyOrder } from "../data/database"
+import { Link } from "react-router-dom";
+import "./Navbar.css"
+
 
 function CartView() { 
   const [userData, setUserData] = useState({
@@ -56,24 +59,27 @@ function CartView() {
 
   return (
     <div>
-      <h1>Tu carrito</h1>
+      <h1 className="carrito-vacio">Tu carrito</h1>
       {cartItems.length === 0 ? (
-        <p>El carrito está vacío. ¡Agrega algunos productos!</p>
+        <p className="carrito-vacio">El carrito está vacío. ¡Agrega algunos productos!</p>
       ) : (
         cartItems.map(comp => (
-          <div key={comp.id}>
+          <div className="cart-card" key={comp.id}>
             <h3>{comp.title}</h3>
             <p>Precio: {comp.price}</p>
             <p>Unidades: {comp.count}</p>
             <img src={comp.img} alt={comp.title} />
+            <div>
             <button onClick={() => removeItem(comp.id)}>Eliminar</button>
+            </div>
+            
           </div>
         ))
       )}
 
       {/* Solo muestra el formulario si el carrito tiene productos */}
       {cartItems.length > 0 && (
-        <form>
+        <form className="form">
           <h2>Llena los campos para completar tu compra</h2>
           <div>
             <label>Nombre</label>
@@ -95,9 +101,9 @@ function CartView() {
 
       {/* Mostrar la confirmación de la compra o error */}
       {orderConfirmation && (
-        <div>
+        <div className="buy">
           {orderConfirmation.success ? (
-            <div>
+            <div className="">
               <h3>Compra realizada con éxito</h3>
               <p>¡Gracias por tu compra, {userData.username}!</p>
               <p>Tu ID de compra es: {orderConfirmation.orderId}</p>
@@ -105,6 +111,7 @@ function CartView() {
           ) : (
             <p>{orderConfirmation.message}</p>
           )}
+          <Link className="" to={"/"}><button>Seguir comprando</button></Link>
         </div>
       )}
     </div>

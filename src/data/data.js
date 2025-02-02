@@ -79,7 +79,7 @@ const components = [
     "title": "Monitor ASUS ROG Swift PG259QN 24.5''",
     "price": 599.99,
     "stock": 2,
-    "img": "https://example.com/img/asus-rog-swift-pg259qn.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_973452-MLA78663484476_092024-O.webp",
     "category": "Monitores",
     "description": "Monitor Full HD con 360Hz y 1ms de respuesta, ideal para gaming competitivo."
   },
@@ -88,7 +88,7 @@ const components = [
     "title": "Monitor Samsung Odyssey G7 27''",
     "price": 799.99,
     "stock": 10,
-    "img": "https://example.com/img/samsung-odyssey-g7.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_780026-MLA79556674918_102024-O.webp",
     "category": "Monitores",
     "description": "Monitor curvo QHD con 240Hz y soporte para NVIDIA G-Sync."
   },
@@ -97,7 +97,7 @@ const components = [
     "title": "Monitor LG UltraGear 27GN950-B 27''",
     "price": 499.99,
     "stock": 1,
-    "img": "https://example.com/img/lg-ultragear-27gn950.jpg",
+    "img": "https://5.imimg.com/data5/SELLER/Default/2021/1/VY/MR/DU/89376166/lg-27-ultragear-compatible-gaming-monitor-1000x1000.jpg",
     "category": "Monitores",
     "description": "Monitor 4K UHD con 144Hz, 1ms de respuesta y soporte para HDR.",
     "delivery": true,
@@ -107,7 +107,7 @@ const components = [
     "title": "Monitor Dell Alienware AW2521H 24.5''",
     "price": 649.99,
     "stock": 6,
-    "img": "https://example.com/img/dell-alienware-aw2521h.jpg",
+    "img": "https://i.dell.com/is/image/DellContent//content/dam/images/products/electronics-and-accessories/dell/monitors/alienware/aw2521h/aw2521h-cfp-00000ff090-gy.psd?fmt=png-alpha&pscan=auto&scl=1&hei=804&wid=1121&qlt=100,1&resMode=sharp2&size=1121,804&chrss=full",
     "category": "Monitores",
     "description": "Monitor de 360Hz con 1ms de respuesta, ideal para gaming de alta velocidad."
   },
@@ -116,7 +116,7 @@ const components = [
     "title": "Procesador AMD Ryzen 9 7900X",
     "price": 649.99,
     "stock": 8,
-    "img": "https://example.com/img/amd-ryzen-9-7900x.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_742549-MLA51739336390_092022-O.webp",
     "category": "Procesadores",
     "description": "Procesador de 12 núcleos y 24 hilos, ideal para tareas intensivas y gaming."
   },
@@ -125,7 +125,7 @@ const components = [
     "title": "Procesador Intel Core i7-13700K",
     "price": 419.99,
     "stock": 10,
-    "img": "https://example.com/img/intel-core-i7-13700k.jpg",
+    "img": "https://http2.mlstatic.com/D_NQ_NP_685178-MLA52678952840_122022-O.webp",
     "category": "Procesadores",
     "description": "Procesador de 16 núcleos y 24 hilos, ideal para gaming y multitarea avanzada."
   }
